@@ -14,9 +14,7 @@ def caesar_cipher(str, num)
   alphabet_uppercase_ascii = (65..90).to_a
   alphabet_lowercase_ascii = (97..122).to_a
 
-  str = str.split('')
-
-  str = str.map do |char|
+  str.split('').map do |char|
     if range_lowercase?(char)
       get_shifted_ascii(alphabet_lowercase_ascii, char, num).chr
     elsif range_uppercase?(char)
